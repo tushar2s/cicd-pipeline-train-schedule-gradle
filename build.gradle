@@ -2,9 +2,11 @@ plugins {
   id "com.moowork.node" version "1.2.0"
 }
 
+
 node {
  download = true
 }
+
 
 task build
 
@@ -24,6 +26,9 @@ task zip(type: Zip) {
  baseName "trainSchedule"
 }
 
+/* comment
+*
+*/
 build.dependsOn zip
 zip.dependsOn npm_build
 build.dependsOn npm_build
